@@ -1,0 +1,88 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #f06, #4a90e2);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+}
+
+.game {
+  width: 219px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px; /* To'g'ri tarzda o'zgartiring */
+  margin: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.status {
+  width: 220px;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.board-row {
+  display: flex;
+}
+
+.square {
+  background: #fff;
+  border: 2px solid #4a90e2;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  margin: 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.square:hover {
+  background: #f06;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.square:focus {
+  outline: none;
+}
+
+.reset-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background: #4a90e2;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.reset-button:hover {
+  background: #f06;
+}
+
+@media (max-width: 600px) {
+  .game {
+    width: 90%; /* Kichik ekranga moslab qilish */
+  }
+
+  .square {
+    font-size: 24px; /* Kichik ekranga moslab qilish */
+    height: 40px; /* Kichik ekranga moslab qilish */
+    width: 40px; /* Kichik ekranga moslab qilish */
+    line-height: 40px; /* Kichik ekranga moslab qilish */
+  }
+}
